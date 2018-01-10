@@ -1,7 +1,8 @@
 <html>
 <head>
 <style>
-background-image:url('https://pbs.twimg.com/media/DS-J2vrWsAAf-Ev.jpg')
+background-image:url("https://pbs.twimg.com/media/DS-J2vrWsAAf-Ev.jpg");
+background-size: cover
 </style>
 </head>
 <body>
