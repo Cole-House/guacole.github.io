@@ -97,10 +97,10 @@ function create() {
         var baddies = baddie.create(i * 100, 0, 'baddie');
 
         //  Let gravity do its thing
-        baddie.body.gravity.y = 300;
+        baddies.body.gravity.y = 300;
 
         //  This just gives each baddie a slightly random bounce value
-        baddie.body.bounce.y = 0.7 + Math.random() * 0.2;
+        baddies.body.bounce.y = 0.7 + Math.random() * 0.2;
     }
     //  Finally some stars to collect
     stars = game.add.group();
