@@ -86,6 +86,22 @@ function create() {
     player.animations.add('right', [5, 6, 7, 8], 10, true);
  
  baddie = game.add.sprite(32, game.world.height - 150, 'baddie');
+	//creates baddies //
+	 baddie = game.add.group();
+	
+	baddie.enableBody = true;
+// like the stars this creates 6 baddies evenly spaced//
+	  for (var i = 0; i < 6; i++)
+    {
+        //  Create a baddie inside of the 'baddies' group
+        var baddies = baddie.create(i * 100, 0, 'baddie');
+
+        //  Let gravity do its thing
+        baddie.body.gravity.y = 300;
+
+        //  This just gives each baddie a slightly random bounce value
+        baddie.body.bounce.y = 0.7 + Math.random() * 0.2;
+    }
     //  Finally some stars to collect
     stars = game.add.group();
 
