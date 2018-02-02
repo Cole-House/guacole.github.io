@@ -94,7 +94,7 @@ function create() {
 	  for (var x = 0; x < 6; x++)
     {
         //  Create a baddie inside of the 'baddies' group
-        var baddies = baddie.create(x * 100, 0, 'baddie');
+        var baddies = baddie.create(x * 60, 60, 'baddie');
 
         //  Let gravity do its thing
         baddies.body.gravity.y = 300;
