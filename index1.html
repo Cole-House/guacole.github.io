@@ -87,15 +87,14 @@ function create() {
  
  baddie = game.add.sprite(32, game.world.height - 150, 'baddie');
 	//creates baddies //
-	 baddie123 = game.add.group();
-	 game.physics.arcade.enable(baddie);
+	 baddie2 = game.add.group();
 	
 	baddie.enableBody = true;
 // like the stars this creates 6 baddies evenly spaced//
 	  for (var x = 0; x < 6; x++)
     {
         //  Create a baddie inside of the 'baddies' group
-        var baddies = baddie123.create(x * 60, 60, 'baddie');
+        var baddies = baddie2.create(x * 32, 32, 'baddie');
 
         //  Let gravity do its thing
         baddies.body.gravity.y = 300;
