@@ -185,6 +185,19 @@ function collectStar (player, star) {
     scoreText.text = 'Score: ' + score;
 
 }
+	function gameOver (player, baddie){
+		// kills player when it touches baddie//
+		player.destroy();
+		// minus one life
+		lives -= 1;
+		//create new lives text
+		livesText.text = 'Lives: ' + lives;
+		//respawn player
+		game.add.sprite(32, game.world.height - 150, 'dude');
+		//when lives hit 0 you go to the splashscreen
+		if (lives =0) { location.href= "phaserLocation.html";}
+		
+	}
 
 	
 
