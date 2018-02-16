@@ -39,7 +39,8 @@ var baddie;
 var stars;
 var score = 0;
 var scoreText;
-
+var livesText;
+	var lives = 3;
 function create() {
 
     //  We're going to be using physics, so enable the Arcade Physics system
@@ -123,6 +124,7 @@ function create() {
 
     //  The score
     scoreText = game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+	livesText = game.add.text(300, 16, 'lives: 3', { fontSize: '32px', fill: '#000' });
 
     //  Our controls.
     cursors = game.input.keyboard.createCursorKeys();
@@ -187,6 +189,14 @@ function collectStar (player, star) {
 	function gameOver (player, baddie){
 		// kills player when it touches baddie//
 		player.destroy();
+		// minus one life
+		lives -= 1;
+		//create new lives text
+		livesText.text = 'Lives: ' + lives;
+		//respawn player
+		game.add.sprite(32, game.world.height - 150, 'dude');
+		//when lives hit 0 you go to the splashscreen
+		if lives==0{ location.href= "phaserLocation.html"}
 		
 	}
 
