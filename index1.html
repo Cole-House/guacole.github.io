@@ -193,11 +193,8 @@ function collectStar (player, star) {
 		//create new lives text
 		livesText.text = 'Lives: ' + lives;
 		//respawn player
-		game.add.sprite(32, game.world.height - 150, 'dude');
-		game.physics.arcade.enable(player);
-		
-		
-		
+		player.revive();
+				
 	}
 
 	
